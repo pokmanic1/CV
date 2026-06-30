@@ -24,6 +24,20 @@
     color: transparent;
 }
 
+
+@utility gradient-secundar {
+    background: linear-gradient(to bottom, #0059B3, #001455);
+}
+
+
+
+@utility border-gradient {
+  border: 4px solid;
+  border-image: linear-gradient(to bottom, #0059B3, #001455) 1;
+}
+
+
+
 @utility radial-gradient {
     background: radial-gradient(
             circle at center,
