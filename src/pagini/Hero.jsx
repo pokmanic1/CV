@@ -27,29 +27,38 @@ const Hero = () => {
 
 
 
-                            <div className='border border-red-600 w-full h-[50%] flex items-end justify-center'>
+                            <div className='  w-full h-[50%] flex items-end justify-center'>
                                 <img src="/public/IMG-20260220-WA0000.jpg" className='h-[90%] w-[40%] bg-center object-cover rounded-full  border border-green-400' alt="" />
                             </div>
 
 
 
 
-                            <div className='border border-red-600 w-full text-center h-[20%]'>
-                                <h1 className='w-full text-center text-white text-[30px]'>Frontend Developer</h1>
+                            <div className=' w-full text-center h-[20%] border-b border-gray-400 '>
+                                <h1 className='w-full text-center text-white text-[30px] font-semibold'>Frontend Developer</h1>
                                 <h1 className='w-full text-center text-white text-[24px]'>Cirjeu Dumitru</h1>
 
                             </div>
 
 
-                            <div className='col-center border border-red-600 w-full h-[40%]'>
+                            <div className='w-full h-[40%] flex flex-col justify-center items-center gap-1'>
+                                <h1 className='text-center text-white text-[28px] font-semibold leading-tight mb-2'>
+                                    Contact
+                                </h1>
 
-                                <h1 className='w-full text-center text-white text-[28px]'>Contact</h1>
-                                <h1 className='w-full text-center text-white text-[18px]'>Email:cirjeu.dumitru@elev.cihcahul.md</h1>
-                                <h1 className='w-full text-center text-white text-[18px]'>Telefon:+37367100431</h1>
-                                <h1 className='w-full text-center text-white text-[18px]'>Locuinta:Cahul,Moldova</h1>
+                                <a href='mailto:cirjeu.dumitru@elev.cihcahul.md' className='block text-center text-white text-[18px] hover:underline leading-tight'>
+                                    Email: cirjeu.dumitru@elev.cihcahul.md
+                                </a>
 
+                                <a href='tel:+37367100431' className='block text-center text-white text-[18px] hover:underline leading-tight'>
+                                    Telefon: +37367100431
+                                </a>
 
+                                <p className='text-center text-white text-[18px] leading-tight'>
+                                    Loc: Chișinău, Moldova
+                                </p>
                             </div>
+
 
 
 
