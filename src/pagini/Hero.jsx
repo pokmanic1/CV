@@ -54,102 +54,104 @@ const Hero = () => {
     const pDespreMine = new SplitText(".pDEspreMine", { type: "lines" });
     const h1SkillSplit = new SplitText(".h1Skill", { type: "chars" });
 
-    const tl = gsap.timeline();
+    // ------------------------------------ timeline are acum un default ease/duration, deci mișcările sunt mai unitare ------------------------------------
+    const tl = gsap.timeline({
+        defaults: { ease: "power3.out", duration: 0.7 }
+    });
 
     tl.from(".sectiuneaPrincipala", {
         y: 200,
         opacity: 0,
         scale: 0.75,
-        duration: 1.1,
-        ease: "back.out(1.4)"
+        duration: 1.2,
+        ease: "back.out(1.5)"
     })
 
+    // ------------------------------------ overlap mai mare + ease mai "pop" pentru poză ------------------------------------
     .from(".heroImg", {
         scale: 0,
         rotation: 25,
         opacity: 0,
-        duration: 0.8,
-        ease: "back.out(2)"
-    }, "-=0.4")
+        duration: 0.6,
+        ease: "back.out(2.2)"
+    }, "-=0.6")
 
     .from(h1Split.words, {
         opacity: 0,
         y: 20,
-        stagger: 0.05
-    }, "-=0.2")
+        stagger: 0.06
+    }, "-=0.3")
 
     .from(h1NumeSplit.chars, {
         opacity: 0,
         y: 20,
-        stagger: 0.03
-    })
+        stagger: 0.02
+    }, "-=0.2")
 
     .from(h1ContactSplit.words, {
         opacity: 0,
         y: 20,
-        stagger: 0.05
-    })
+        stagger: 0.03
+    }, "-=0.2")
 
     .from(".aEmail, .aTel, .pLocuinta", {
         opacity: 0,
         y: 15,
-        stagger: 0.2
-    })
+        stagger: 0.1
+    }, "-=0.15")
 
     .from(h1DespreMine.chars, {
         opacity: 0,
         y: 15,
-        stagger: 0.03
-    })
+        stagger: 0.02
+    }, "-=0.3")
 
     .from(pDespreMine.lines, {
         opacity: 0,
         y: 15,
         stagger: 0.2
-    })
+    }, "-=0.1")
 
     .from(".educationCard", {
         opacity: 0,
         x: -30,
         scale: 0.9,
         stagger: 0.15,
-        duration: 0.5
-    })
+        duration: 0.4
+    }, "-=0.1")
 
     .from(h1SkillSplit.chars, {
         opacity: 0,
         y: 20,
         stagger: 0.03
-    })
+    }, "-=0.6")
 
     .from(".skillCard", {
         opacity: 0,
         x: 50,
-        stagger: 0.12,
-        duration: 0.5
-    })
+        scale: 0.9,
+        stagger: 0.1,
+        duration: 0.55,
+        ease: "back.out(1.7)"
+    }, "-=0.2")
 
     .from(".heroButton", {
         opacity: 0,
         y: 40,
         scale: 0.8,
-        duration: 0.6
-    });
+        duration: 0.6,
+        ease: "back.out(1.6)"
+    }, "-=0.1");
 
     gsap.to(".heroImg", {
         y: -8,
-        duration: 2,
+        duration: 2.4,
         repeat: -1,
         yoyo: true,
-        ease: "power1.inOut"
+        ease: "sine.inOut"
     });
 
-    gsap.to(".sectiuneaPrincipala", {
-        boxShadow: "0px 10px 45px 12px rgba(59,130,246,0.35)",
-        duration: 2,
-        repeat: -1,
-        yoyo: true
-    });
+    
 });
 
 
@@ -157,15 +159,15 @@ const Hero = () => {
 
 
     return (
-        <section ref={containerRef} className='flex-center w-full min-h-dvh bg-[linear-gradient(135deg,#3795DB_0%,#004CB2_50%,#001C66_100%)] py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-10 lg:py-[70px] lg:px-[90px]'>
+        <section ref={containerRef} className='flex-center w-full min-h-dvh bg-[linear-gradient(135deg,#3795DB_0%,#004CB2_50%,#001C66_100%)] py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-10 lg:py-[10px] lg:px-[90px]'>
             <div className='col-center w-full h-full bg-white'>
 
 
-                <div className='w-full h-auto md:h-[70%] grid grid-cols-1 md:grid-cols-7 bg-white gap-y-10 md:gap-y-0' >
+                <div className='w-full h-auto lg:h-[70%] grid grid-cols-1 lg:grid-cols-7 bg-white gap-y-10 lg:gap-y-0 lg:rounded-none rounded-[20px] ' >
 
 
 
-                    <div className='w-full h-full p-4 sm:p-5 md:p-[20px] md:col-span-2 order-2 md:order-1'>
+                    <div className='w-full h-full p-4 sm:p-5 md:p-[20px] lg:col-span-2 order-2 lg:order-1'>
                         <div >
                             <div>
                                 <h1 className='h1DespreMine text-center  text-blue-600 text-[22px] sm:text-[26px] md:text-[30px]  leading-tight mb-4'>
@@ -185,10 +187,10 @@ const Hero = () => {
 
 
 
-                    <div className='w-full md:col-start-3 md:col-span-3 relative z-10 order-1 md:order-2 min-h-[480px] sm:min-h-[520px] md:min-h-0'>
+                    <div className='w-full lg:col-start-3 lg:col-span-3 relative z-10 order-1 lg:order-2 min-h-[480px] sm:min-h-[520px] md:min-h-[520px] lg:min-h-0'>
 
 
-                        <div className='sectiuneaPrincipala absolute inset-x-0 top-0 bottom-0 md:-top-12 md:-bottom-13 gradient-secundar rounded-3xl col-center  shadow-[0px_10px_30px_10px_#4b5563] gap-[10px] px-[10px] '>
+                        <div className='sectiuneaPrincipala absolute inset-x-0 top-0 bottom-0 lg:-top-12 lg:-bottom-0 gradient-secundar rounded-3xl col-center  shadow-[0px_10px_30px_10px_#4b5563] gap-[10px] px-[10px] '>
 
 
 
@@ -233,7 +235,7 @@ const Hero = () => {
                     </div>
 
 
-                    <div className='  w-full h-full md:col-span-2  p-4 sm:p-5 md:p-[20px] order-3   '>
+                    <div className='  w-full h-full lg:col-span-2  p-4 sm:p-5 md:p-[20px] order-3   '>
                         <h1 className='h1Skill  text-center  text-blue-600 text-[22px] sm:text-[26px] md:text-[30px]  leading-tight mb-6'>
                             Skilluri
                         </h1>
@@ -258,7 +260,7 @@ const Hero = () => {
                 </div>
 
 
-                <div className='w-full h-auto md:h-[30%]  bg-white  flex-center p-6 sm:p-8 md:p-[30px]' >
+                <div className='w-full h-auto lg:h-[30%]  bg-white  flex-center p-6 sm:p-8 md:p-[30px]' >
 
                     <motion.div
                         whileHover={{
