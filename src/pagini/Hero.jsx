@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom';
 const arr = [
     {
         id: 1,
@@ -40,7 +41,7 @@ const Hero = () => {
             <div className='col-center   w-full h-full bg-white'>
 
 
-                <div className='w-full h-[70%] grid grid-cols-1 md:grid-cols-7 bg-white border border-black' >
+                <div className='w-full h-[70%] grid grid-cols-1 md:grid-cols-7 bg-white ' >
 
 
 
@@ -55,9 +56,9 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className='col-center gap-[15px] mt-[29px] '>
-                            <div className='border-gradient py-1 px-6 text-center'>Educatie: Colegiul “I. Hajdeu” Cahul</div>
-                            <div className='border-gradient py-1 px-6 text-center'>Varsta: 19 ani</div>
-                            <div className='border-gradient py-1 px-6 text-center'>Dorinta Principala: Invatare -Crestere</div>
+                            <div className='border-gradient py-1 px-6 text-center'>Educație: Colegiul „I. Hasdeu” Cahul</div>
+                            <div className='border-gradient py-1 px-6 text-center'>ârsta: 19 ani</div>
+                            <div className='border-gradient py-1 px-6 text-center'>Dorința Principală: Învățare - Creștere</div>
                         </div>
                     </div>
 
@@ -67,7 +68,7 @@ const Hero = () => {
                     <div className='w-full md:col-start-3 md:col-span-3 relative z-10'>
 
 
-                        <div className='absolute inset-x-0 -top-10 -bottom-6 gradient-secundar rounded-3xl col-center  shadow-[0px_10px_30px_10px_#4b5563] gap-[10px] px-[10px] '>
+                        <div className='absolute inset-x-0 -top-12 -bottom-13 gradient-secundar rounded-3xl col-center  shadow-[0px_10px_30px_10px_#4b5563] gap-[10px] px-[10px] '>
 
 
 
@@ -135,9 +136,13 @@ const Hero = () => {
 
 
                 </div>
-                <div className='w-full h-[30%]  bg-white border border-red-200' >
 
+                
+                <div className='w-full h-[30%]  bg-white border border-black flex-center p-[30px]' >
 
+                            <div className='min-w-[10%] py-2 px-9  flex justify-center items-start mt-auto border-2 bg-gray-200 border-black rounded-2xl'>
+                                <Link to="/portofoliu" className=''>Vezi mai mult</Link>
+                            </div>
                 </div>
             </div>
         </section>
