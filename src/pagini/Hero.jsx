@@ -157,70 +157,70 @@ const Hero = () => {
 
 
     return (
-        <section ref={containerRef} className='flex-full bg-[linear-gradient(135deg,#3795DB_0%,#004CB2_50%,#001C66_100%)] py-[70px] px-[90px]'>
-            <div className='col-center   w-full h-full bg-white'>
+        <section ref={containerRef} className='flex-center w-full min-h-dvh bg-[linear-gradient(135deg,#3795DB_0%,#004CB2_50%,#001C66_100%)] py-8 px-4 sm:py-10 sm:px-6 md:py-12 md:px-10 lg:py-[70px] lg:px-[90px]'>
+            <div className='col-center w-full h-full bg-white'>
 
 
-                <div className='w-full h-[70%] grid grid-cols-1 md:grid-cols-7 bg-white ' >
+                <div className='w-full h-auto md:h-[70%] grid grid-cols-1 md:grid-cols-7 bg-white gap-y-10 md:gap-y-0' >
 
 
 
-                    <div className='w-full h-full p-[20px] md:col-span-2    '>
+                    <div className='w-full h-full p-4 sm:p-5 md:p-[20px] md:col-span-2 order-2 md:order-1'>
                         <div >
                             <div>
-                                <h1 className='h1DespreMine text-center  text-blue-600 text-[30px]  leading-tight mb-4'>
+                                <h1 className='h1DespreMine text-center  text-blue-600 text-[22px] sm:text-[26px] md:text-[30px]  leading-tight mb-4'>
                                     Despre Mine
                                 </h1>
 
-                                <p className='pDEspreMine block text-center text-gray-600 text-[16px]'>Dezvoltator Front-End pasionat de web development și de propunerea  ideilor în proiecte practice. Sunt în căutarea unei oportunități într-o echipă dinamică, unde să-mi extind cunoștințele, să învăț de la cei din jurul meu ,contribuind activ la dezvoltarea proiectelor.</p>
+                                <p className='pDEspreMine block text-center text-gray-600 text-[14px] sm:text-[15px] md:text-[16px]'>Dezvoltator Front-End pasionat de web development și de propunerea  ideilor în proiecte practice. Sunt în căutarea unei oportunități într-o echipă dinamică, unde să-mi extind cunoștințele, să învăț de la cei din jurul meu ,contribuind activ la dezvoltarea proiectelor.</p>
                             </div>
                         </div>
                         <div className='col-center gap-[15px] mt-[29px] '>
-                            <div className='educationCard  border-gradient py-1 px-6 text-center '>Educație: Colegiul „I. Hasdeu” Cahul</div>
-                            <div className='educationCard  border-gradient py-1 px-6 text-center '>ârsta: 19 ani</div>
-                            <div className='educationCard  border-gradient py-1 px-6 text-center '>Dorința Principală: Învățare - Creștere</div>
+                            <div className='educationCard  border-gradient py-1 px-4 sm:px-6 text-center text-[14px] sm:text-[16px]'>Educație: Colegiul „I. Hasdeu” Cahul</div>
+                            <div className='educationCard  border-gradient py-1 px-4 sm:px-6 text-center text-[14px] sm:text-[16px]'>Vârsta: 19 ani</div>
+                            <div className='educationCard  border-gradient py-1 px-4 sm:px-6 text-center text-[14px] sm:text-[16px]'>Dorința Principală: Învățare - Creștere</div>
                         </div>
                     </div>
 
 
 
 
-                    <div className='w-full md:col-start-3 md:col-span-3 relative z-10'>
+                    <div className='w-full md:col-start-3 md:col-span-3 relative z-10 order-1 md:order-2 min-h-[480px] sm:min-h-[520px] md:min-h-0'>
 
 
-                        <div className='sectiuneaPrincipala absolute inset-x-0 -top-12 -bottom-13 gradient-secundar rounded-3xl col-center  shadow-[0px_10px_30px_10px_#4b5563] gap-[10px] px-[10px] '>
+                        <div className='sectiuneaPrincipala absolute inset-x-0 top-0 bottom-0 md:-top-12 md:-bottom-13 gradient-secundar rounded-3xl col-center  shadow-[0px_10px_30px_10px_#4b5563] gap-[10px] px-[10px] '>
 
 
 
 
                             <div className='  w-full h-[50%] flex items-end justify-center'>
-                                <img src="/public/IMG-20260220-WA0000.jpg" className='heroImg  h-[90%] w-[40%] bg-center object-cover rounded-full  ' alt="" />
+                                <img src="/public/IMG-20260220-WA0000.jpg" className='heroImg  h-[85%] sm:h-[90%] w-[55%] sm:w-[45%] md:w-[40%] bg-center object-cover rounded-full  ' alt="" />
                             </div>
 
 
 
 
                             <div className=' w-full text-center h-[20%] border-b border-gray-400 '>
-                                <h1 className='h1FrontEnd w-full text-center text-white text-[30px] font-semibold'>Frontend Developer</h1>
-                                <h1 className='h1Nume w-full text-center text-white text-[24px]'>Cirjeu Dumitru</h1>
+                                <h1 className='h1FrontEnd w-full text-center text-white text-[22px] sm:text-[26px] md:text-[30px] font-semibold'>Frontend Developer</h1>
+                                <h1 className='h1Nume w-full text-center text-white text-[18px] sm:text-[21px] md:text-[24px]'>Cirjeu Dumitru</h1>
 
                             </div>
 
 
-                            <div className='w-full h-[40%] flex flex-col justify-center items-center gap-1'>
-                                <h1 className='h1Contact text-center text-white text-[28px] font-semibold leading-tight mb-2'>
+                            <div className='w-full h-[40%] flex flex-col justify-center items-center gap-1 px-2'>
+                                <h1 className='h1Contact text-center text-white text-[20px] sm:text-[24px] md:text-[28px] font-semibold leading-tight mb-2'>
                                     Contact
                                 </h1>
 
-                                <a href='mailto:cirjeu.dumitru@elev.cihcahul.md' className='aEmail block text-center text-white text-[18px] hover:underline leading-tight'>
+                                <a href='mailto:cirjeu.dumitru@elev.cihcahul.md' className='aEmail block text-center text-white text-[13px] sm:text-[15px] md:text-[18px] hover:underline leading-tight break-all'>
                                     Email: cirjeu.dumitru@elev.cihcahul.md
                                 </a>
 
-                                <a href='tel:+37367100431' className='aTel block text-center text-white text-[18px] hover:underline leading-tight'>
+                                <a href='tel:+37367100431' className='aTel block text-center text-white text-[13px] sm:text-[15px] md:text-[18px] hover:underline leading-tight'>
                                     Telefon: +37367100431
                                 </a>
 
-                                <p className='pLocuinta text-center text-white text-[18px] leading-tight'>
+                                <p className='pLocuinta text-center text-white text-[13px] sm:text-[15px] md:text-[18px] leading-tight'>
                                     Locuinta: Cahul, Moldova
                                 </p>
                             </div>
@@ -233,18 +233,18 @@ const Hero = () => {
                     </div>
 
 
-                    <div className='  w-full h-full md:col-span-2  p-[20px]   '>
-                        <h1 className='h1Skill  text-center  text-blue-600 text-[30px]  leading-tight mb-6'>
+                    <div className='  w-full h-full md:col-span-2  p-4 sm:p-5 md:p-[20px] order-3   '>
+                        <h1 className='h1Skill  text-center  text-blue-600 text-[22px] sm:text-[26px] md:text-[30px]  leading-tight mb-6'>
                             Skilluri
                         </h1>
 
-                        <div className='col-center  gap-[20px]'>
+                        <div className='col-center  gap-[16px] sm:gap-[20px]'>
 
 
                             {arr.map((item) => (
-                                <div key={item.id} className='skillCard  min-w-[200px] py-[2px] flex items-center justify-center gap-[8px] shadow-[0px_2px_30px_2px_rgba(0,90,240,0.5)] rounded-xl text-center scale-95 hover:scale-105'>
-                                    <img src={item.img} className='block object-center object-cover bg-center w-[8%]' alt="" />
-                                    <p>{item.name}</p>
+                                <div key={item.id} className='skillCard  w-full max-w-[280px] sm:min-w-[200px] py-2 px-3 flex items-center justify-center gap-[10px] shadow-[0px_2px_30px_2px_rgba(0,90,240,0.5)] rounded-xl text-center scale-95 hover:scale-105'>
+                                    <img src={item.img} className='block object-center object-cover bg-center w-[24px] sm:w-[28px] shrink-0' alt="" />
+                                    <p className='text-[14px] sm:text-[16px]'>{item.name}</p>
                                 </div>
                             ))}
 
@@ -258,7 +258,7 @@ const Hero = () => {
                 </div>
 
 
-                <div className='w-full h-[30%]  bg-white  flex-center p-[30px]' >
+                <div className='w-full h-auto md:h-[30%]  bg-white  flex-center p-6 sm:p-8 md:p-[30px]' >
 
                     <motion.div
                         whileHover={{
@@ -282,8 +282,8 @@ const Hero = () => {
                             mass: 0.8,
                             duration: 0.3,
                         }}
-                        className='heroButton  min-w-[10%] py-2 px-9  flex justify-center items-start mt-auto border-2 bg-gray-200 border-black rounded-2xl'>
-                        <Link to="/portofoliu" className=''>Vezi mai mult</Link>
+                        className='heroButton  min-w-[140px] sm:min-w-[10%] py-2 px-6 sm:px-9  flex justify-center items-start mt-auto border-2 bg-gray-200 border-black rounded-2xl'>
+                        <Link to="/portofoliu" className='text-[14px] sm:text-[16px]'>Vezi mai mult</Link>
                     </motion.div>
                 </div>
             </div>
