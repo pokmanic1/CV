@@ -1,5 +1,39 @@
 import React from 'react'
 
+const arr = [
+    {
+        id: 1,
+        name: 'Git',
+        img: '/public/git.png'
+    },
+    {
+        id: 2,
+        name: 'Tailwind CSS',
+        img: '/public/tailw.png'
+    },
+    {
+        id: 3,
+        name: 'JavaScript',
+        img: '/public/js.png'
+    },
+    {
+        id: 4,
+        name: 'React',
+        img: '/public/react.png'
+    },
+    {
+        id: 5,
+        name: 'GSAP',
+        img: '/public/GSAP.png'
+    },
+    {
+        id: 6,
+        name: 'Framer Motion',
+        img: '/public/Framar.png'
+    }
+]
+
+
 const Hero = () => {
     return (
         <section className='flex-full bg-[linear-gradient(135deg,#3795DB_0%,#004CB2_50%,#001C66_100%)] py-[70px] px-[90px]'>
@@ -13,7 +47,7 @@ const Hero = () => {
                     <div className='w-full h-full p-[20px] md:col-span-2  border border-black  '>
                         <div>
                             <div>
-                                <h1 className='text-center  text-gradient text-[30px]  leading-tight mb-2'>
+                                <h1 className='text-center  text-gradient text-[30px]  leading-tight mb-4'>
                                     Despre Mine
                                 </h1>
 
@@ -78,9 +112,24 @@ const Hero = () => {
                     </div>
 
 
+                    <div className='w-full h-full md:col-span-2 border p-[20px]  border-black '>
+                        <h1 className='text-center  text-gradient text-[30px]  leading-tight mb-6'>
+                            Skilluri
+                        </h1>
 
-                    <div className='w-full h-full md:col-span-2 border border-black '>
+                        <div className='col-center  gap-[20px]'>
 
+
+                            {arr.map((item) => (
+                                <div key={item.id} className='min-w-[200px] py-[2px] flex items-center justify-center gap-[8px] shadow-[0px_2px_30px_2px_rgba(0,90,240,0.5)] rounded-xl text-center'>
+                                    <img src={item.img} className='block object-center object-cover bg-center w-[8%]' alt="" />
+                                    <p>{item.name}</p>
+                                </div>
+                            ))}
+
+
+
+                        </div>
                     </div>
 
 
